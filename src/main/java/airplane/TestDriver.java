@@ -2,6 +2,8 @@ package airplane;
 
 import java.io.IOException;
 
+import edu.neumont.kinsey.savabledatabase.SavableDatabase;
+
 public class TestDriver {
 	
 	public static final int CountPassengers = 10;

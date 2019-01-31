@@ -1,8 +1,11 @@
 package airplane;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Airplane implements CanBeSaved {
+public class Airplane implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	private int airSpeed;
 	
@@ -56,25 +59,25 @@ public class Airplane implements CanBeSaved {
 				"co-pilot=" + this.getCoPilot() + ";\r\n" +
 				"passengers=" + this.getPassengers();
 	}
-	
-	public String serialize() {
-		return this.getAirSpeed() + "\r\n" +
-				this.getPilots().serialize() + "\r\n" +
-				this.getPassengers().serializePassengers() + "\r\n";
-	}
-	
-	public void deserialize(String rawData) {
-		String[] lines = rawData.trim().split("\r\n");
-		this.setAirSpeed(Integer.parseInt(lines[0].trim()));
-		this.getPilots().deserialize(lines[1].trim());
-		this.getPassengers().deserializePassenger(lines[2].trim());
-	}
-
-	@Override
-	public String getFileName() {
-		return this.getAirSpeed() + ".txt";
-	}
-	
+//	
+//	public String serialize() {
+//		return this.getAirSpeed() + "\r\n" +
+//				this.getPilots().serialize() + "\r\n" +
+//				this.getPassengers().serializePassengers() + "\r\n";
+//	}
+//	
+//	public void deserialize(String rawData) {
+//		String[] lines = rawData.trim().split("\r\n");
+//		this.setAirSpeed(Integer.parseInt(lines[0].trim()));
+//		this.getPilots().deserialize(lines[1].trim());
+//		this.getPassengers().deserializePassenger(lines[2].trim());
+//	}
+//
+//	@Override
+//	public String getFileName() {
+//		return this.getAirSpeed() + ".txt";
+//	}
+//	
 }
 
 

@@ -1,8 +1,11 @@
 package airplane;
 
+import java.io.Serializable;
 
-public class Person implements Comparable<Person> {
+public class Person implements Comparable<Person>, Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
 	private String name;
 	
 	public Person() {}
@@ -33,12 +36,12 @@ public class Person implements Comparable<Person> {
 	public int compareTo(Person o) {
 		return this.getName().compareTo(o.getName());
 	}
-	
-	public String serialize() {
-		return this.getName();
-	}
-	
-	public void deserialize(String rawData) {
-		this.setName(rawData.trim());
-	}
+//	
+//	public String serialize() {
+//		return this.getName();
+//	}
+//	
+//	public void deserialize(String rawData) {
+//		this.setName(rawData.trim());
+//	}
 }

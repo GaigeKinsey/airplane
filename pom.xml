@@ -3,4 +3,12 @@
   <groupId>edu.neumont.cox</groupId>
   <artifactId>airplane</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+  	<dependency>
+		<groupId>edu.neumont.kinsey</groupId>
+		<artifactId>savable-database</artifactId>
+		<version>1.0</version>
+  	</dependency>
+  </dependencies>
 </project>
