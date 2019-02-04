@@ -12,7 +12,7 @@ public class TestDriver {
 		Airplane plane = new Airplane();
 		SavableDatabase database = new SavableDatabase();
 		
-//		database.load(new AirplaneFactory());
+//		database.load();
 		
 		plane.getPilots().add(new Pilot("Captain Jim", PilotRank.Captain));
 		plane.getPilots().add(new Pilot("Co-Pilot Jerry", PilotRank.CoPilot));
